@@ -47,6 +47,8 @@ import static rkr.simplekeyboard.inputmethod.latin.common.Constants.Subtype.KEYB
  */
 // non final for easy mocking.
 public class RichInputMethodManager {
+
+
     private static final String TAG = RichInputMethodManager.class.getSimpleName();
     private static final boolean DEBUG = false;
 

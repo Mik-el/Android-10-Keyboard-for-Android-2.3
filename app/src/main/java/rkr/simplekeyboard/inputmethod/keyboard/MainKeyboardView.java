@@ -16,8 +16,9 @@
 
 package rkr.simplekeyboard.inputmethod.keyboard;
 
-import android.animation.AnimatorInflater;
-import android.animation.ObjectAnimator;
+/*mikel import android.animation.ObjectAnimator;
+*/
+import rkr.simplekeyboard.nineoldandroids.animation.*;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.TypedArray;
@@ -218,8 +219,13 @@ public final class MainKeyboardView extends KeyboardView implements MoreKeysPane
             // TODO: Stop returning null.
             return null;
         }
-        final ObjectAnimator animator = (ObjectAnimator)AnimatorInflater.loadAnimator(
+        final ObjectAnimator animator;
+
+        /*Mikel edit*/
+        animator = (ObjectAnimator) AnimatorInflater.loadAnimator(
                 getContext(), resId);
+
+
         if (animator != null) {
             animator.setTarget(target);
         }
@@ -359,8 +365,12 @@ public final class MainKeyboardView extends KeyboardView implements MoreKeysPane
 
         locatePreviewPlacerView();
         getLocationInWindow(mOriginCoords);
+        /*Mikel edit
         mKeyPreviewChoreographer.placeAndShowKeyPreview(key, keyboard.mIconsSet, getKeyDrawParams(),
                 mOriginCoords, mDrawingPreviewPlacerView, isHardwareAccelerated());
+         */
+        mKeyPreviewChoreographer.placeAndShowKeyPreview(key, keyboard.mIconsSet, getKeyDrawParams(),
+                mOriginCoords, mDrawingPreviewPlacerView, false);
     }
 
     private void dismissKeyPreviewWithoutDelay(final Key key) {
@@ -383,10 +393,15 @@ public final class MainKeyboardView extends KeyboardView implements MoreKeysPane
     }
 
     private void dismissKeyPreview(final Key key) {
-        if (isHardwareAccelerated()) {
-            mKeyPreviewChoreographer.dismissKeyPreview(key, true /* withAnimation */);
-            return;
-        }
+
+        //Mikel removed hardware accele
+        //if (isHardwareAccelerated()) {
+        //    mKeyPreviewChoreographer.dismissKeyPreview(key, true /* withAnimation */);
+        //    return;
+        //}
+
+
+
         // TODO: Implement preference option to control key preview method and duration.
         mTimerHandler.postDismissKeyPreview(key, mKeyPreviewDrawParams.getLingerTimeout());
     }
@@ -429,7 +444,11 @@ public final class MainKeyboardView extends KeyboardView implements MoreKeysPane
             mMoreKeysKeyboardCache.put(key, moreKeysKeyboard);
         }
 
+        /*Mikel change
         final MoreKeysKeyboardView moreKeysKeyboardView =
+                mMoreKeysKeyboardContainer.findViewById(R.id.more_keys_keyboard_view);
+         */
+        final MoreKeysKeyboardView moreKeysKeyboardView = (MoreKeysKeyboardView)
                 mMoreKeysKeyboardContainer.findViewById(R.id.more_keys_keyboard_view);
         moreKeysKeyboardView.setKeyboard(moreKeysKeyboard);
         mMoreKeysKeyboardContainer.measure(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);

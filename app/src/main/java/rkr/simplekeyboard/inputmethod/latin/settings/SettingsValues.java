@@ -103,6 +103,11 @@ public class SettingsValues {
         if (!mShowsLanguageSwitchKey) {
             return false;
         }
+
+//        Mikel removed
+//        final RichInputMethodManager imm = RichInputMethodManager.getInstance();
+//        return imm.hasMultipleEnabledIMEsOrSubtypes(false /* include aux subtypes */);
+
         final RichInputMethodManager imm = RichInputMethodManager.getInstance();
         return imm.hasMultipleEnabledIMEsOrSubtypes(false /* include aux subtypes */);
     }
