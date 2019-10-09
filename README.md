@@ -27,7 +27,7 @@
  - The keyboard crashes :(
 
 # The last unsolved error according to logcat
- - (It's a classic "colud not find class X referenced from method Y" problem, but I haven't figured out how to solve it yet)
+ - (It's a classic "colud not find class X referenced from method Y" problem, [link][log1] but I haven't figured out how to solve it yet)
  - In other words, a java class in this code (rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager) uses methods that belongs to an android class (android.view.inputmethod.InputMethodSubtype) that can't be used in this project. 
 
 # How to quickly work on this code
@@ -52,3 +52,4 @@ Search in the whole project the word "Mikel" (Ctrl+Maiusc+F) and you'll quickly 
 [googlecode]: <https://android.googlesource.com/platform/packages/inputmethods/LatinIME/>
 [simplekeyboardcode]:<https://github.com/Mik-el/simple-keyboard/blob/master/README.md>
 [jake]:<https://github.com/JakeWharton/NineOldAndroids/>
+[log1]:<http://bit.ly/33kx8Yv>
