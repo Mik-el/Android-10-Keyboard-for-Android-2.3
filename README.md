@@ -36,7 +36,9 @@ Search in the whole project the word "Mikel" (Ctrl+Maiusc+F) and you'll quickly 
 
 # Credits and Support
  - Mik-el (me, works on Android 2.3+ support)
- <a href="https://paypal.me/donationMikel"><img src="https://www.paypalobjects.com/webstatic/mktg/merchant_portal/button/donate.en.png" align="center" width="160" ></a>
+ <img src="images/donate_icon.png"
+      align="center"
+      width="160"/>
  - rkkr (worked on the [SimpleKeyboard][simplekeyboardcode] code)
  - Jake Wharton ([backported][jake] Android animation)
 # My Social pages
