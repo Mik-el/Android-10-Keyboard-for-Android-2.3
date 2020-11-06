@@ -44,6 +44,7 @@ Search in the whole project the word "Mikel" (Ctrl+Maiusc+F) and you'll quickly 
 # My Social pages
 |  |  |
 | ------ | ------ |
+| Telegram Channel | [link][tg] |
 | XDA Forum | [link][xda] |
 | Tech Blog | [link][cam] |
 | Instagram | [link][insta] |
@@ -56,4 +57,5 @@ Search in the whole project the word "Mikel" (Ctrl+Maiusc+F) and you'll quickly 
 [simplekeyboardcode]:<https://github.com/Mik-el/simple-keyboard/blob/master/README.md>
 [jake]:<https://github.com/JakeWharton/NineOldAndroids/>
 [log1]:<http://bit.ly/33kx8Yv>
-[cam]:<https://cam.tv/mik_el_tech>
+[cam]:<http://bit.ly/2mffw0h>
+[tg]:<https://bit.ly/Mikel_TG>
